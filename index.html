@@ -1,1 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Meme Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>HTML Meme Generator</h1>
+
+    <section class="controls">
+      <label>
+        <span>Upload image:</span>
+        <input type="file" id="imageInput" accept="image/*" />
+      </label>
+
+      <label>
+        <span>Caption text:</span>
+        <input type="text" id="captionInput" placeholder="Enter your meme text" />
+      </label>
+
+      <label>
+        <span>Text size (px):</span>
+        <input type="number" id="fontSizeInput" value="40" min="10" max="120" />
+      </label>
+
+      <label>
+        <span>Text color:</span>
+        <input type="color" id="fontColorInput" value="#ffffff" />
+      </label>
+
+      <label>
+        <span>Outline color:</span>
+        <input type="color" id="strokeColorInput" value="#000000" />
+      </label>
+
+      <button id="downloadBtn" disabled>Download JPEG</button>
+    </section>
+
+    <section class="preview">
+      <h2>Live preview</h2>
+      <!-- Canvas is the actual render target -->
+      <canvas id="memeCanvas"></canvas>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
 
